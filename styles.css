@@ -1,0 +1,159 @@
+@media (min-width: 992px) {
+  #header-container {
+    background: rgb(225,205,145);
+    color: var(--bs-success);
+  }
+}
+
+#header-container {
+  background: rgb(225,205,145);
+  color: var(--bs-success);
+}
+
+@media (min-width: 300px) {
+  div {
+    width: min-content;
+  }
+}
+
+div {
+  width: 117%;
+}
+
+#logo {
+  margin-top: auto;
+}
+
+header {
+  background-color: #7a501f;
+}
+
+background {
+}
+
+.me-10 {
+  background-color: #e8e1b8;
+}
+
+h1 {
+  color: #e6e2cf;
+  /*font-size: 28;*/
+  font-size: clamp (1.0rem, 4vw, 1.8rem);
+}
+
+body {
+  width: 1222px;
+}
+
+#navbar {
+  background: var(--bs-navbar-disabled-color);
+  border: none;
+  opacity: 1;
+  backdrop-filter: opacity(1);
+  -webkit-backdrop-filter: opacity(1);
+}
+
+#navcol-1 {
+}
+
+img {
+}
+
+@media (min-width: 576px) {
+  img {
+    width: 150px;
+    height: 150px;
+    margin-left: 9px;
+    margin-top: 16px;
+    max-width: 12.5%;
+    max-height: initial;
+  }
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  margin-left: 9px;
+  margin-top: 16px;
+  max-width: 12.5%;
+  max-height: initial;
+}
+
+@media (min-width: 301px) {
+  img {
+    width: 107px;
+    height: 110px;
+  }
+}
+
+@media (min-width: 992px) {
+  #college-name {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+#college-name {
+  text-align: center;
+  font-size: clamp(0.5rem,3vw,1.5rem);
+}
+
+@media (min-width: 1200px) {
+  #college-name {
+    text-align: center;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+}
+
+#college-logo {
+  width: 150px;
+  height: auto;
+  max-width: clamp(80px,15vw,150px);
+  /*min-width: 100px;*/
+  /*min-height: 100px;*/
+  max-height: auto;
+  margin: auto;
+}
+
+.navbar {
+  --bs-navbar-padding-x: 0;
+  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+  --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+  --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+  --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-brand-padding-y: 0.3125rem;
+  --bs-navbar-brand-margin-end: 1rem;
+  --bs-navbar-brand-font-size: 1.25rem;
+  --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-nav-link-padding-x: 0.5rem;
+  --bs-navbar-toggler-padding-y: 0.25rem;
+  --bs-navbar-toggler-padding-x: 0.75rem;
+  --bs-navbar-toggler-font-size: 1.25rem;
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+  --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+  --bs-navbar-toggler-focus-width: 0.25rem;
+  --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  font-size: clamp(0.8rem,3vw,1.0rem;
+}
+
+.running-text {
+  white-space: nowrap;
+  padding: 15px 20px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  margin: 15px 0;
+  animation: scroll-left 18s linear infinite;
+}
+

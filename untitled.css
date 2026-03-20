@@ -1,0 +1,17 @@
+@media (min-width: 576px) {
+  .container {
+    width: 1116px;
+    height: 36px;
+    margin-top: 20px;
+    margin-left: 65px;
+    font-size: 17px;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+}
+
+@container (min-width: 576px) {
+  #college-name {
+    font-size: 25;
+  }
+}
+

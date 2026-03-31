@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#eeeeed",
+              "inverse-primary": "#a7cbe4",
+              "primary": "#073246",
+              "tertiary": "#3f2b00",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#006e6f",
+              "on-secondary": "#ffffff",
+              "background": "#faf9f8",
+              "on-primary-container": "#93b7cf",
+              "surface-container-low": "#f4f3f2",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#90eff0",
+              "tertiary-fixed": "#ffdea6",
+              "surface-bright": "#faf9f8",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#76d6d6",
+              "surface-container-high": "#e9e8e7",
+              "surface-variant": "#e3e2e1",
+              "on-surface-variant": "#40484c",
+              "on-primary-fixed-variant": "#264b5f",
+              "on-secondary-fixed-variant": "#004f50",
+              "error-container": "#ffdad6",
+              "outline-variant": "#c0c7cd",
+              "surface-tint": "#3f6378",
+              "primary-container": "#24495d",
+              "primary-fixed": "#c4e7ff",
+              "secondary": "#00696a",
+              "on-error-container": "#93000a",
+              "surface-dim": "#dadad9",
+              "primary-fixed-dim": "#a7cbe4",
+              "inverse-on-surface": "#f1f0f0",
+              "outline": "#71787d",
+              "on-surface": "#1a1c1c",
+              "on-tertiary-container": "#e0a935",
+              "tertiary-container": "#5b4000",
+              "on-tertiary-fixed": "#271900",
+              "on-secondary-fixed": "#002020",
+              "inverse-surface": "#2f3130",
+              "surface-container-highest": "#e3e2e1",
+              "tertiary-fixed-dim": "#f7bd48",
+              "secondary-fixed": "#93f2f3",
+              "on-tertiary-fixed-variant": "#5d4200",
+              "on-background": "#1a1c1c",
+              "error": "#ba1a1a",
+              "surface": "#faf9f8",
+              "on-primary-fixed": "#001e2c"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #faf9f8; color: #1a1c1c; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif', serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-[#faf9f8] dark:bg-[#1a1c1c] shadow-sm dark:shadow-none docked full-width top-0 z-50 sticky">
+<nav class="flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-[#073246] dark:text-[#faf9f8] serif">SAMPRITI</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity" href="#">HOME</a>
+<a class="text-[#00696a] dark:text-[#f7bd48] border-b-2 border-[#00696a] pb-1 font-semibold" href="#">PUBLICATIONS</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity" href="#">CREATIVE LOUNGE</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity" href="#">ARCHIVES</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity" href="#">GALLERY</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity" href="#">ABOUT US</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="hover:text-[#00696a] dark:hover:text-[#f7bd48] transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="hover:text-[#00696a] dark:hover:text-[#f7bd48] transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative bg-primary-container py-24 overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/pinstriped-suit.png')]"></div>
+<div class="max-w-screen-2xl mx-auto px-12 relative z-10">
+<div class="max-w-3xl">
+<span class="text-tertiary-fixed-dim tracking-[0.2em] text-xs font-semibold uppercase mb-4 block">Archive &amp; Repository</span>
+<h1 class="text-on-primary text-5xl md:text-6xl font-headline mb-6 leading-tight">Intellectual Harmony: The Digital Library</h1>
+<p class="text-on-primary-container text-xl font-body leading-relaxed max-w-2xl">
+                        A curated sanctuary of medical discourse, artistic intersection, and scientific breakthroughs. Explore our collection of peer-reviewed papers, creative journals, and clinical insights.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Search & Filter Controls -->
+<section class="bg-surface-container-low border-none -mt-8 relative z-20 mx-12 rounded-lg shadow-xl">
+<div class="p-8 flex flex-col lg:flex-row gap-8 items-center justify-between">
+<!-- Search Bar -->
+<div class="w-full lg:w-1/3 group">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-8 py-3 bg-transparent border-b border-outline-variant focus:border-secondary focus:ring-0 transition-all font-body text-on-surface outline-none" placeholder="Search by title, author, or keyword..." type="text"/>
+</div>
+</div>
+<!-- Tabs/Filters -->
+<div class="flex flex-wrap gap-4 justify-center">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-lg text-sm font-medium transition-all">All Publications</button>
+<button class="px-6 py-2 bg-surface-container-lowest text-on-surface-variant hover:text-secondary hover:bg-secondary-container/20 rounded-lg text-sm font-medium transition-all">Magazines</button>
+<button class="px-6 py-2 bg-surface-container-lowest text-on-surface-variant hover:text-secondary hover:bg-secondary-container/20 rounded-lg text-sm font-medium transition-all">Newsletters</button>
+<button class="px-6 py-2 bg-surface-container-lowest text-on-surface-variant hover:text-secondary hover:bg-secondary-container/20 rounded-lg text-sm font-medium transition-all">Research Papers</button>
+</div>
+<!-- Sorting -->
+<div class="flex items-center gap-3 text-sm text-outline">
+<span class="material-symbols-outlined text-sm">sort</span>
+<select class="bg-transparent border-none focus:ring-0 font-medium text-on-surface cursor-pointer">
+<option>Newest First</option>
+<option>Oldest First</option>
+<option>Most Read</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Publications Grid -->
+<section class="max-w-screen-2xl mx-auto px-12 py-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Publication Card 1 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-[400px] overflow-hidden">
+<img alt="Journal Cover" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Elegant medical journal cover featuring a macro abstract of biological cells in deep blues and golds, editorial typography layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGAEZtZhQ6NN4_vIVCgWxHSV87QvnfyrBm-nAy-of8qNg_ycbW2pnVOUHh4AV9hA5Tv0nCT8fs0GBjdK0w1JA9VK3IfHzHSUCCqslfQ5OdSbyJtSHRXOYGpBqcoIrTguoKhnOQOhyI7rWDMD0BgVHvDNiwxMKwQ3bB5P9Ibf91gHbdX6Zdvwfr3WJ1G11fs8H3zaUPW4appUO805mECwaKCG7VMc_-NA6zD2aq8tJjvCDKyHsCZLARKNrUmFyuc8yMIGSzxqHL3Fc"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-fixed-dim text-on-tertiary-fixed text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Magazine</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-outline text-xs font-medium mb-2 font-label tracking-widest">WINTER EDITION • DEC 2023</span>
+<h3 class="text-2xl text-primary font-headline mb-4 group-hover:text-secondary transition-colors">The Aesthetic Anatomy: Volume IV</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-8 flex-grow">
+                            An exploration into the visual symmetry of human physiology and its representation in classical and modern art.
+                        </p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/15">
+<button class="text-secondary font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                                Read Online <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Publication Card 2 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-[400px] overflow-hidden">
+<img alt="Research Paper" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of clinical research document on a wooden desk with a stethoscope and spectacles, soft morning library lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5fAHmcInXuoCzsR2hRaw2DEurWAKywGbc9wZxCD-Tv6QnJFLlRL3ktifHT-RH8Kn-K-dJ2v2J1Lw6DKRi7Y5S7noDKbvqmzJQtkeJBec-b42WCdQaFffwmDF1gYJwBA-kPmv5_XIxNaMg1Wft6V4erIh-_4JLRzyguk1dHpn-SLWO1YH_x6FR4bePcxxKbL8tYHLerG65aUF64Gm2LKkmtSPYST_jpiN413-9p-X9k2YTvTqS-tGk1_SFz3DukZzSCLOnwRVUPhY"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-on-primary text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Research</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-outline text-xs font-medium mb-2 font-label tracking-widest">PEER REVIEWED • OCT 2023</span>
+<h3 class="text-2xl text-primary font-headline mb-4 group-hover:text-secondary transition-colors">Neuroplasticity in Creative Practice</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-8 flex-grow">
+                            Clinical study on the synaptic changes observed in medical professionals engaged in daily artistic routines.
+                        </p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/15">
+<button class="text-secondary font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                                Read Online <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Publication Card 3 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-[400px] overflow-hidden">
+<img alt="Newsletter" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist newsletter cover with a clean botanical illustration and elegant serif headings on ivory paper texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGCSlk9L1BO1AqNjATweJOno-5nVaFhwI6iGrUzwwuZPtO0wtqsYJ1LvDsM6zymiHhewvxw7ctbUpzX_Fv5n71cM8ZqSffK2jraaWQIdq8m1JV-FuWXpwAu_3gjeVNefkB_TkbVJHt1H7xw7xNMxwaeT8gk32CjVDeB-LBI_Z0uKITtXCPcfvPE--6ckfgCIBXFFPDK8E9M-xsCiJlzjZfwxKn62aezZzbW0MbZuLEqcvHVPTY1nbnHydB8eA117708UmTQo2_-_c"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-on-secondary text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Newsletter</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-outline text-xs font-medium mb-2 font-label tracking-widest">MONTHLY DIGEST • SEP 2023</span>
+<h3 class="text-2xl text-primary font-headline mb-4 group-hover:text-secondary transition-colors">SAMPRITI Pulse: September</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-8 flex-grow">
+                            Monthly highlights of society events, member spotlight, and upcoming exhibition announcements.
+                        </p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/15">
+<button class="text-secondary font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                                Read Online <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Publication Card 4 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-[400px] overflow-hidden">
+<img alt="Research Paper" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A focused image of an open heavy book with complex diagrams and handwritten clinical notes in the margins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQD8knb-cqO6b1WeM6kLl8up8KN0u4lBFrXR0NBvEATcCp3Fd5qyeDpGVgITFewHjMRfFnBMxJQzkh0knyv7k1WViQt5PqozWQGNJC1fC7aM67oKMebxpfJZzfcJ_7IyV4u75tQ4CyMsRpDIfAtQAfkwCi6EEGSBTwuEM99j-wSvJJkHVOrLnFqJIA0MTWoFmHvF8Va9dD7ctaJc0YuzO3UBteFTqszqZ6AwzmM_ojd94vUm98Lf0bC8sUA-TcStIWPPPJv_Ro0_s"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-on-primary text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Research</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-outline text-xs font-medium mb-2 font-label tracking-widest">SPECIAL ISSUE • AUG 2023</span>
+<h3 class="text-2xl text-primary font-headline mb-4 group-hover:text-secondary transition-colors">Cardiological Rhythms &amp; Music</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-8 flex-grow">
+                            A comparative analysis of heart rate variability and melodic synchronization in intensive care environments.
+                        </p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/15">
+<button class="text-secondary font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                                Read Online <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Publication Card 5 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-[400px] overflow-hidden">
+<img alt="Magazine Cover" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern magazine cover with a minimalist portrait of a doctor overlayed with organic floral illustrations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRxn6AqzklezRSDeWrTHFboeeLYZdNARFoCGThKcSbFrb36lY5Sm4ZvpO6ltWcWjcENPSrrXDYdVFHUL962yf42zBLElbXARGn1aYRtCo5sZSyMWHCMsq4dcJrpOHDczRqI_Ay6Pd53Q8J_gB6DsRStXsqhXuwtJs_1i4VQDJQQoA4CIJjrENyNHMBYimXpN5FVMV_yiwcaylAJrq_ggFXUemm_nx57RFekBFjZKCy1_-TfeuK_OP-Yo6hR7JliEilMlBdEU3fOBE"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-fixed-dim text-on-tertiary-fixed text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Magazine</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-outline text-xs font-medium mb-2 font-label tracking-widest">SUMMER EDITION • JUL 2023</span>
+<h3 class="text-2xl text-primary font-headline mb-4 group-hover:text-secondary transition-colors">The Human Canvas: Vol III</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-8 flex-grow">
+                            Focusing on dermatological beauty through the lens of Renaissance art and modern surgical precision.
+                        </p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/15">
+<button class="text-secondary font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                                Read Online <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Publication Card 6 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-[400px] overflow-hidden">
+<img alt="Newsletter" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Clean corporate newsletter layout with professional medical staff in a high-tech lab environment, bright airy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9YwfhE4UCkjoAjbXdjM5z76Bz2UPOvIO3sZ27JoFsZpND59qUBug7wnaO3c-HxiqAB-0MRS9w13nQ4n2XVcKg_mvcesqkSVuShrrUor4g7rdpYM5mQv0vO5QTkb6dTZf-2OXM2DtLttw4xY3qTcuf1iTRsR0crVukb1e-UGbMiJXAxdsAilkJK2y1D3wJeif3j7-PpdybtPruBc53KARUjELKWQe1HJb08xS8ezC7lVMnaG-pcCerbcp0ml85DPfMmdJokrI2E7k"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-on-secondary text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Newsletter</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-outline text-xs font-medium mb-2 font-label tracking-widest">MONTHLY DIGEST • JUN 2023</span>
+<h3 class="text-2xl text-primary font-headline mb-4 group-hover:text-secondary transition-colors">SAMPRITI Pulse: June</h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-8 flex-grow">
+                            Recap of the Annual Medical Art Symposium and interviews with leading neuro-artists.
+                        </p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/15">
+<button class="text-secondary font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                                Read Online <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-outline hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded bg-primary text-on-primary font-medium">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:bg-surface-container transition-all">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:bg-surface-container transition-all">3</button>
+<span class="text-outline">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded text-on-surface-variant hover:bg-surface-container transition-all">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-outline hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Newsletter Subscription -->
+<section class="bg-surface-container-high py-20 mt-12">
+<div class="max-w-4xl mx-auto px-12 text-center">
+<h2 class="text-3xl font-headline text-primary mb-4">Subscribe to the Clinical Curator</h2>
+<p class="text-on-surface-variant font-body mb-10">Receive monthly digests of our latest publications and exclusive society news directly in your inbox.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+<input class="flex-grow px-6 py-3 bg-surface-container-lowest border-none rounded focus:ring-2 focus:ring-secondary/50 outline-none text-sm font-body" placeholder="Your medical affiliation email" type="email"/>
+<button class="px-8 py-3 bg-primary text-on-primary font-semibold text-sm rounded hover:bg-primary-container transition-all" type="submit">JOIN NOW</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f4f3f2] dark:bg-[#121414] w-full mt-auto py-16 px-12 border-t border-[#073246]/10">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="max-w-sm">
+<div class="text-xl font-bold text-[#073246] dark:text-[#faf9f8] serif mb-4">SAMPRITI</div>
+<p class="text-on-surface-variant font-body italic text-sm leading-relaxed serif">
+                    "Bridging the chasm between clinical precision and the fluidity of artistic expression."
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="text-[10px] font-bold tracking-[0.2em] text-[#073246] uppercase">Explore</h4>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] transition-all text-sm" href="#">Research Papers</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] transition-all text-sm" href="#">Visual Essays</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] transition-all text-sm" href="#">Digital Exhibits</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[10px] font-bold tracking-[0.2em] text-[#073246] uppercase">Connect</h4>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] transition-all text-sm" href="#">Contact Us</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] transition-all text-sm" href="#">Editorial Board</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] transition-all text-sm" href="#">Submissions</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[10px] font-bold tracking-[0.2em] text-[#073246] uppercase">Legal</h4>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] transition-all text-sm" href="#">Privacy Policy</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] transition-all text-sm" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto mt-16 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant text-[11px] font-body">© 2024 SAMPRITI Medical Society. Bridging Science and Artistry.</p>
+<div class="flex gap-6">
+<a class="text-outline hover:text-primary transition-all" href="#"><span class="material-symbols-outlined text-xl">brand_awareness</span></a>
+<a class="text-outline hover:text-primary transition-all" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="text-outline hover:text-primary transition-all" href="#"><span class="material-symbols-outlined text-xl">rss_feed</span></a>
+</div>
+</div>
+</footer>
+</body></html>

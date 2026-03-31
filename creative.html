@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#eeeeed",
+              "inverse-primary": "#a7cbe4",
+              "primary": "#073246",
+              "tertiary": "#3f2b00",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#006e6f",
+              "on-secondary": "#ffffff",
+              "background": "#faf9f8",
+              "on-primary-container": "#93b7cf",
+              "surface-container-low": "#f4f3f2",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#90eff0",
+              "tertiary-fixed": "#ffdea6",
+              "surface-bright": "#faf9f8",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#76d6d6",
+              "surface-container-high": "#e9e8e7",
+              "surface-variant": "#e3e2e1",
+              "on-surface-variant": "#40484c",
+              "on-primary-fixed-variant": "#264b5f",
+              "on-secondary-fixed-variant": "#004f50",
+              "error-container": "#ffdad6",
+              "outline-variant": "#c0c7cd",
+              "surface-tint": "#3f6378",
+              "primary-container": "#24495d",
+              "primary-fixed": "#c4e7ff",
+              "secondary": "#00696a",
+              "on-error-container": "#93000a",
+              "surface-dim": "#dadad9",
+              "primary-fixed-dim": "#a7cbe4",
+              "inverse-on-surface": "#f1f0f0",
+              "outline": "#71787d",
+              "on-surface": "#1a1c1c",
+              "on-tertiary-container": "#e0a935",
+              "tertiary-container": "#5b4000",
+              "on-tertiary-fixed": "#271900",
+              "on-secondary-fixed": "#002020",
+              "inverse-surface": "#2f3130",
+              "surface-container-highest": "#e3e2e1",
+              "tertiary-fixed-dim": "#f7bd48",
+              "secondary-fixed": "#93f2f3",
+              "on-tertiary-fixed-variant": "#5d4200",
+              "on-background": "#1a1c1c",
+              "error": "#ba1a1a",
+              "surface": "#faf9f8",
+              "on-primary-fixed": "#001e2c"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #faf9f8; color: #1a1c1c; }
+        .font-serif-header { font-family: 'Noto Serif', serif; }
+        .glass-panel { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- Top Navigation Bar -->
+<header class="bg-[#faf9f8] dark:bg-[#1a1c1c] shadow-sm dark:shadow-none docked full-width top-0 z-50">
+<nav class="flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-[#073246] dark:text-[#faf9f8] font-serif-header">SAMPRITI</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity hover:text-[#00696a] text-sm tracking-wide" href="#">HOME</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity hover:text-[#00696a] text-sm tracking-wide" href="#">PUBLICATIONS</a>
+<a class="text-[#00696a] dark:text-[#f7bd48] border-b-2 border-[#00696a] pb-1 font-semibold text-sm tracking-wide" href="#">CREATIVE LOUNGE</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity hover:text-[#00696a] text-sm tracking-wide" href="#">ARCHIVES</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity hover:text-[#00696a] text-sm tracking-wide" href="#">GALLERY</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity hover:text-[#00696a] text-sm tracking-wide" href="#">ABOUT US</a>
+</div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors" data-icon="search">search</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</nav>
+</header>
+<main class="max-w-screen-2xl mx-auto px-6 md:px-12 py-12">
+<!-- Hero Section -->
+<section class="relative overflow-hidden mb-24 rounded-xl">
+<div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-container opacity-95"></div>
+<div class="relative z-10 py-20 px-12 md:py-32 flex flex-col items-center text-center">
+<span class="text-tertiary-fixed-dim font-label text-xs tracking-[0.2em] mb-4 uppercase">The Artistic Intermission</span>
+<h1 class="text-5xl md:text-7xl font-serif-header text-on-primary mb-6 max-w-4xl leading-tight">Where Clinical Minds Find Creative <span class="italic text-tertiary-fixed-dim">Solace</span>.</h1>
+<p class="text-on-primary-container text-lg md:text-xl max-w-2xl font-light leading-relaxed mb-10">Explore the intersection of medicine and the arts. From neuro-chess to anatomical crosswords, indulge in a curated space for scientific leisure.</p>
+<div class="flex gap-4">
+<button class="bg-gradient-to-r from-secondary to-primary text-on-primary px-8 py-3 rounded text-sm font-semibold hover:shadow-lg transition-all">START EXPLORING</button>
+<button class="border border-outline-variant/30 text-on-primary px-8 py-3 rounded text-sm font-semibold hover:bg-white/10 transition-all">CONTRIBUTE ART</button>
+</div>
+</div>
+<!-- Decorative Bleeding Element -->
+<div class="absolute -bottom-12 -right-12 w-96 h-96 bg-tertiary-fixed-dim opacity-10 rounded-full blur-3xl"></div>
+</section>
+<!-- Game Selection - Asymmetric Bento Grid -->
+<section class="mb-32">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-12">
+<h2 class="text-3xl font-serif-header text-primary">Cognitive Diversions</h2>
+<p class="text-outline font-label text-sm mt-2 md:mt-0 italic">Mental agility through medical play</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Chess -->
+<div class="md:col-span-1 bg-surface-container-low p-8 flex flex-col justify-between hover:bg-surface-container transition-colors group cursor-pointer border-none rounded-lg">
+<div class="mb-12">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform block" data-icon="chess">chess</span>
+<h3 class="text-xl font-serif-header mt-4 text-primary">Chess</h3>
+<p class="text-sm text-on-surface-variant mt-2">Strategic maneuvers for the diagnostic mind.</p>
+</div>
+<span class="text-secondary font-semibold text-xs tracking-widest flex items-center gap-2">PLAY NOW <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></span>
+</div>
+<!-- Sudoku -->
+<div class="md:col-span-1 bg-surface-container-low p-8 flex flex-col justify-between hover:bg-surface-container transition-colors group cursor-pointer border-none rounded-lg">
+<div class="mb-12">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform block" data-icon="grid_on">grid_on</span>
+<h3 class="text-xl font-serif-header mt-4 text-primary">Sudoku</h3>
+<p class="text-sm text-on-surface-variant mt-2">Precision patterns for pharmaceutical focus.</p>
+</div>
+<span class="text-secondary font-semibold text-xs tracking-widest flex items-center gap-2">SOLVE <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></span>
+</div>
+<!-- MedQuiz -->
+<div class="md:col-span-2 bg-secondary-container/20 p-8 flex flex-col justify-between hover:bg-secondary-container/30 transition-colors group cursor-pointer border-none rounded-lg">
+<div class="flex justify-between items-start">
+<div>
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:scale-110 transition-transform block" data-icon="quiz">quiz</span>
+<h3 class="text-2xl font-serif-header mt-4 text-primary">MedQuiz</h3>
+<p class="text-base text-on-surface-variant mt-2 max-w-xs">Test your clinical acumen against a clock. Competitive edge for residents.</p>
+</div>
+<div class="hidden lg:block w-32 h-32 bg-primary/5 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-primary opacity-20" data-icon="medical_services" data-weight="fill" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+</div>
+<span class="text-secondary font-bold text-xs tracking-widest flex items-center gap-2 mt-8">CHALLENGE PEERS <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></span>
+</div>
+<!-- Crosswords -->
+<div class="md:col-span-4 bg-surface-container-low p-10 flex flex-col md:flex-row gap-8 items-center border-none rounded-lg hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="bg-white p-4 shadow-sm rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined text-6xl text-tertiary-fixed-dim" data-icon="crossword">crossword</span>
+</div>
+<div>
+<h3 class="text-2xl font-serif-header text-primary">Anatomical Crosswords</h3>
+<p class="text-on-surface-variant mt-2 max-w-2xl leading-relaxed">The weekly Sampriti crossword features cryptic clues based on Latin terminology and modern surgical procedures. A true test of terminology mastery.</p>
+<div class="flex gap-4 mt-6">
+<span class="bg-primary/5 px-3 py-1 text-[10px] font-bold text-primary tracking-widest uppercase rounded">New Weekly</span>
+<span class="bg-primary/5 px-3 py-1 text-[10px] font-bold text-primary tracking-widest uppercase rounded">Difficulty: Specialist</span>
+</div>
+</div>
+<div class="md:ml-auto">
+<span class="material-symbols-outlined text-4xl text-primary/20 group-hover:text-primary transition-colors" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Puzzle of the Day -->
+<section class="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<span class="text-tertiary-fixed-dim font-label text-xs tracking-widest mb-4 block font-bold">DAILY CHALLENGE</span>
+<h2 class="text-4xl font-serif-header text-primary mb-6">The Pathologist's Eye</h2>
+<div class="bg-tertiary-fixed-dim w-12 h-1 mb-8"></div>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8 italic">"Identify the abnormality in this microscopic section to unlock today's editorial exclusive."</p>
+<div class="space-y-4 mb-10">
+<div class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary" data-icon="schedule">schedule</span>
+<span class="text-sm font-medium">Resetting in 14:22:05</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary" data-icon="group">group</span>
+<span class="text-sm font-medium">1,248 Physicians Solved Today</span>
+</div>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded font-semibold text-sm hover:bg-primary-container transition-all shadow-md">SOLVE TODAY'S PUZZLE</button>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2 relative">
+<div class="aspect-[4/3] rounded-xl overflow-hidden shadow-2xl relative">
+<img alt="Scientific aesthetic" class="w-full h-auto object-cover scale-110" data-alt="Microscopic view of cellular structures with artistic vibrant blue and purple staining, aesthetic and abstract medical laboratory imagery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0iyygmCiwzNRIwZczOsDAh6Xc7SRDi7X9CpPqSlUTRZfiHfa22Sk_S1KZJ32o3YpMkf3tSblVASdO62O2P9zJCUTAi8fMCBu1Cs8dM029h028WQbJrX4mV_0mjEojNDt4Fm_O-d-ZLpnkuhbW7HLa2ZUWXdunVsQtcBweihDUC-YdYhkmvWaQa7aaderA6BK1dwX9ZtaBqEDPQBfRqVufvY7EivKOD2jZ_5bX4i2ALuBxLkxUg_0iIxaZPAKSGoLCXhMnLKue7D4"/>
+<div class="absolute inset-0 bg-primary/10 hover:bg-transparent transition-all duration-500"></div>
+</div>
+<!-- Artistic Overlap -->
+<div class="absolute -bottom-8 -left-8 glass-panel p-6 rounded shadow-xl hidden md:block max-w-[240px]">
+<p class="text-xs font-serif-header italic text-primary leading-relaxed">"The best physicians are those who find the pattern in the chaos of symptoms."</p>
+<div class="mt-4 flex items-center gap-2">
+<div class="h-[1px] w-8 bg-tertiary-fixed-dim"></div>
+<span class="text-[10px] font-bold tracking-widest">DR. A. SAMPRITI</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contribution Section -->
+<section class="bg-surface-container-low rounded-2xl p-8 md:p-16 mb-24 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[15rem]" data-icon="draw">draw</span>
+</div>
+<div class="relative z-10 max-w-3xl">
+<h2 class="text-3xl md:text-4xl font-serif-header text-primary mb-6">Pen the Prescription for Art.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">The Creative Lounge thrives on the contributions of our medical community. Whether it's clinical poetry, surgical sketches, or complex medical riddles, your artistry has a home here.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="edit_note">edit_note</span>
+<div>
+<h4 class="font-bold text-primary mb-1">Literary Submissions</h4>
+<p class="text-sm text-on-surface-variant">Essays on the human side of medicine or short medical fiction.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="palette">palette</span>
+<div>
+<h4 class="font-bold text-primary mb-1">Visual Arts</h4>
+<p class="text-sm text-on-surface-variant">Anatomical digital art, photography from the wards, or illustrations.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded font-bold text-xs tracking-widest hover:bg-on-secondary-container transition-all">SUBMIT YOUR WORK</button>
+<button class="border border-primary/20 text-primary px-8 py-4 rounded font-bold text-xs tracking-widest hover:bg-primary/5 transition-all">VIEW GUIDELINES</button>
+</div>
+</div>
+</section>
+<!-- Signature Pull Quote -->
+<section class="mb-24 flex justify-center py-12">
+<div class="max-w-4xl px-8 border-l-4 border-tertiary-fixed-dim">
+<h3 class="text-3xl md:text-4xl font-serif-header text-primary italic leading-tight">"Medicine is a science of uncertainty and an art of probability. In this lounge, we celebrate the art that makes the science bearable."</h3>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f4f3f2] dark:bg-[#121414] w-full mt-auto py-16 px-12 border-t border-[#073246]/10">
+<div class="flex flex-col md:flex-row justify-between items-start gap-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-4">
+<div class="text-xl font-bold text-[#073246] dark:text-[#faf9f8] font-serif-header">SAMPRITI</div>
+<p class="max-w-xs text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 text-sm italic font-serif-header">
+                    Bridging Science and Artistry. A sanctuary for the medical mind to explore beyond the clinic.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="flex flex-col gap-3">
+<span class="text-xs font-bold text-primary tracking-widest uppercase mb-2">Explore</span>
+<a class="text-sm opacity-60 hover:text-secondary transition-all" href="#">Latest Issues</a>
+<a class="text-sm opacity-60 hover:text-secondary transition-all" href="#">Research</a>
+<a class="text-sm opacity-60 hover:text-secondary transition-all" href="#">Multimedia</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-xs font-bold text-primary tracking-widest uppercase mb-2">Engage</span>
+<a class="text-sm opacity-60 hover:text-secondary transition-all" href="#">Member Games</a>
+<a class="text-sm opacity-60 hover:text-secondary transition-all" href="#">Competitions</a>
+<a class="text-sm opacity-60 hover:text-secondary transition-all" href="#">Events</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-xs font-bold text-primary tracking-widest uppercase mb-2">Society</span>
+<a class="text-sm opacity-60 hover:text-secondary transition-all" href="#">Editorial Board</a>
+<a class="text-sm opacity-60 hover:text-secondary transition-all" href="#">Privacy Policy</a>
+<a class="text-sm opacity-60 hover:text-secondary transition-all" href="#">Terms</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-xs font-bold text-primary tracking-widest uppercase mb-2">Contact</span>
+<a class="text-sm opacity-60 hover:text-secondary transition-all" href="#">Support</a>
+<a class="text-sm opacity-60 hover:text-secondary transition-all" href="#">Submissions</a>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto mt-16 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[10px] text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 tracking-wider">
+                © 2024 SAMPRITI Medical Society. Bridging Science and Artistry.
+            </p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary opacity-40 hover:opacity-100 cursor-pointer" data-icon="share">share</span>
+<span class="material-symbols-outlined text-primary opacity-40 hover:opacity-100 cursor-pointer" data-icon="language">language</span>
+</div>
+</div>
+</footer>
+</body></html>

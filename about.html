@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf9f8;
+            color: #1a1c1c;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-container": "#eeeeed",
+                "inverse-primary": "#a7cbe4",
+                "primary": "#073246",
+                "tertiary": "#3f2b00",
+                "on-primary": "#ffffff",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#006e6f",
+                "on-secondary": "#ffffff",
+                "background": "#faf9f8",
+                "on-primary-container": "#93b7cf",
+                "surface-container-low": "#f4f3f2",
+                "on-tertiary": "#ffffff",
+                "secondary-container": "#90eff0",
+                "tertiary-fixed": "#ffdea6",
+                "surface-bright": "#faf9f8",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed-dim": "#76d6d6",
+                "surface-container-high": "#e9e8e7",
+                "surface-variant": "#e3e2e1",
+                "on-surface-variant": "#40484c",
+                "on-primary-fixed-variant": "#264b5f",
+                "on-secondary-fixed-variant": "#004f50",
+                "error-container": "#ffdad6",
+                "outline-variant": "#c0c7cd",
+                "surface-tint": "#3f6378",
+                "primary-container": "#24495d",
+                "primary-fixed": "#c4e7ff",
+                "secondary": "#00696a",
+                "on-error-container": "#93000a",
+                "surface-dim": "#dadad9",
+                "primary-fixed-dim": "#a7cbe4",
+                "inverse-on-surface": "#f1f0f0",
+                "outline": "#71787d",
+                "on-surface": "#1a1c1c",
+                "on-tertiary-container": "#e0a935",
+                "tertiary-container": "#5b4000",
+                "on-tertiary-fixed": "#271900",
+                "on-secondary-fixed": "#002020",
+                "inverse-surface": "#2f3130",
+                "surface-container-highest": "#e3e2e1",
+                "tertiary-fixed-dim": "#f7bd48",
+                "secondary-fixed": "#93f2f3",
+                "on-tertiary-fixed-variant": "#5d4200",
+                "on-background": "#1a1c1c",
+                "error": "#ba1a1a",
+                "surface": "#faf9f8",
+                "on-primary-fixed": "#001e2c"
+              },
+              fontFamily: {
+                "headline": ["Noto Serif"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-[#faf9f8] dark:bg-[#1a1c1c] docked full-width top-0 z-50 shadow-sm dark:shadow-none border-none sticky">
+<nav class="flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-[#073246] dark:text-[#faf9f8] font-headline">SAMPRITI</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity text-xs tracking-widest font-label" href="#">HOME</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity text-xs tracking-widest font-label" href="#">PUBLICATIONS</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity text-xs tracking-widest font-label" href="#">CREATIVE LOUNGE</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity text-xs tracking-widest font-label" href="#">ARCHIVES</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity text-xs tracking-widest font-label" href="#">GALLERY</a>
+<a class="text-[#00696a] dark:text-[#f7bd48] border-b-2 border-[#00696a] pb-1 font-semibold text-xs tracking-widest font-label" href="#">ABOUT US</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors" data-icon="search">search</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section: Editorial Header -->
+<section class="relative pt-24 pb-32 px-12 overflow-hidden">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-16 items-end">
+<div class="md:w-2/3">
+<span class="text-tertiary-fixed-dim font-label text-[0.75rem] tracking-[0.2em] uppercase mb-6 block">Our Legacy &amp; Philosophy</span>
+<h1 class="text-[3.5rem] leading-tight font-headline text-primary mb-8 max-w-3xl">
+                        Bridging the <span class="italic">Intellectual</span> Gap between Medicine and Humanity.
+                    </h1>
+<p class="text-lg text-on-surface-variant font-body leading-relaxed max-w-2xl">
+                        SAMPRITI was founded on the belief that a physician's greatest tool is not just a stethoscope, but a profound understanding of the human narrative. We curate the intersection of clinical excellence and creative expression.
+                    </p>
+</div>
+<div class="md:w-1/3 relative">
+<div class="w-full aspect-[3/4] bg-surface-container-low rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-90" data-alt="Close-up of vintage medical journal pages with elegant typography and detailed botanical illustrations of medicinal plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCF4AFZcqyANLXylCkD44rTkPzjvAncfytgrEAJRXW8felOwkyV1wVTolAj6Ly_o-AU5znvMjSvu5nBN7YJE33YPDermPbdGi454U_E434e94Myc2cYrsp7b_8KIog87kYtwxA_bM7Pj8lreI5HQXgvD1NVyXc3Aj4QZ3Fk9hGKRFGdRn94Zva9slf9-y_murvQsk6EzSUm4tkCfkAtDgNbcYWYKIul-aNp8DllTCNyuykxjA1MpxglOirI_VjISCOfHE7c6jweIw"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<!-- Overlapping element for Editorial Feel -->
+<div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-8 shadow-sm max-w-[240px] hidden lg:block">
+<p class="text-sm font-headline italic leading-snug">"Art is the heartbeat of medicine, and medicine is the canvas of our humanity."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Narrative Section: History & Motto -->
+<section class="bg-surface-container-low py-24 px-12">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-4">
+<h2 class="text-2xl font-headline text-primary border-l-2 border-tertiary-fixed-dim pl-6 mb-8">The Foundation</h2>
+<p class="font-body text-on-surface-variant leading-loose mb-6">
+                        Established in late 2014 by a group of visionary medical students, SAMPRITI emerged as a sanctuary for those who found comfort in both pathology and poetry.
+                    </p>
+<p class="font-body text-on-surface-variant leading-loose">
+                        What started as a modest newsletter has evolved into a nationally recognized Medical Society, fostering a community of over 5,000 clinicians and students.
+                    </p>
+</div>
+<div class="lg:col-span-8 flex flex-col justify-center bg-surface-container-lowest p-12 lg:p-20 rounded-xl shadow-sm">
+<!-- Curated Pull-Quote Signature Component -->
+<div class="flex gap-8 items-start mb-12">
+<div class="w-1 h-32 bg-tertiary-fixed-dim shrink-0"></div>
+<div>
+<span class="text-tertiary-fixed-dim font-label text-[0.65rem] tracking-[0.3em] uppercase block mb-4">The SAMPRITI Motto</span>
+<blockquote class="text-[2.25rem] font-headline italic text-primary leading-tight">
+                                "Symphony of Science, Empathy in Practice."
+                            </blockquote>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-4">
+<div>
+<h3 class="font-label text-xs font-bold tracking-widest text-primary uppercase mb-4">Our Mission</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">To nurture the 'Complete Physician' by providing a platform for literary, artistic, and clinical excellence through peer-reviewed journals and collaborative workshops.</p>
+</div>
+<div>
+<h3 class="font-label text-xs font-bold tracking-widest text-primary uppercase mb-4">The Vision</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">To be the global standard for medical-humanities integration, ensuring clinical precision is always balanced by humanistic depth.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Meet the Editorial Board -->
+<section class="py-24 px-12">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="text-tertiary-fixed-dim font-label text-[0.75rem] tracking-[0.2em] uppercase mb-4 block">The Custodians</span>
+<h2 class="text-3xl font-headline text-primary">Meet the Editorial Board</h2>
+</div>
+<div class="hidden md:block">
+<a class="text-primary font-label text-xs tracking-widest uppercase border-b border-outline-variant hover:border-secondary transition-all pb-1" href="#">View Full Directory</a>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+<!-- Board Member 1 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Portrait of a distinguished male doctor in business attire with a warm, professional expression, soft office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIPXElK7DNoNH-oJ-_5Rs5tyF_6IZbiCTS9vRvhuwRT8II9UlebyRTdInQJOf3rH9qQBVE8tOPA7b8HyCKuHJZ5jtmPKTxL0fJfcXSqpDSo9EIlfRf5uVm7lXrGen-gNg_2U5BudYGi1nxheyKn7bHO3RduAujujd58l7Gy_V1gqjn901MkqkT2iITiJ0omExcs8-WHM49IpPi8YcAYhkc1lPu5T4OmcjEVlUufeegP0H_myHyNB8dI38RN3x1t8oLjedph-8c1i0"/>
+<div class="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<span class="text-white text-[0.65rem] tracking-[0.1em] font-label uppercase">Editor-in-Chief</span>
+</div>
+</div>
+<h4 class="font-headline text-xl text-primary mb-1">Dr. Arpan Chatterjee</h4>
+<p class="text-on-surface-variant text-sm font-body italic">Senior Consultant, Internal Medicine</p>
+</div>
+<!-- Board Member 2 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Portrait of a female medical researcher with glasses, professional clinical environment in background, natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJhBMHK2EvEgsiiXDYL_ghx_ibAJeN9sTHiGtnPL_JV2dNEn_KefMp4NnAkGCOpaPJ2UAB3lnZqUyi0Dm0dx-j7fJmxdXmTcIYzWZbicbhmr40f3CaPy6-TjCWnZJutRXtVOk603oFC14d-w-ufi_Rynl3WMy0FTJ9EipBDNsfIkVLuFem9LaTwp3iyNAcXqcwh2yei4C0F_TIG-mJaSlcu8CJvWUmZHN94o8aK5nfq_rzszJljI8UOr2cB7bCqz9yZ_9NfS16edA"/>
+<div class="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<span class="text-white text-[0.65rem] tracking-[0.1em] font-label uppercase">Executive Editor</span>
+</div>
+</div>
+<h4 class="font-headline text-xl text-primary mb-1">Dr. Sonalika Varma</h4>
+<p class="text-on-surface-variant text-sm font-body italic">Assistant Professor, Pathology</p>
+</div>
+<!-- Board Member 3 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Male cardiologist in professional attire, subtle library background, high-end editorial photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeHopAEJDg4CHStlBi5NB2UYCN-BeTKe-xitko2pSnKgsetqbr_6GFuY5FtOLrj-nCJvcmh_pWJ95N4S0bScEEYadItWdBUpGm1WnNjBR-4R4Y_lxgl6GJw0550hPbO6u67iKAPqhOooKMTwdIYpKW-ZkPNN786uzVPL0LcJkzIzSWf4Re5BIOwuRCYN4YVQ9hIS8zKkngCVGdVOq2A12FGDiTpwdh-OW8x28eLLZyPiIRa59_4OWhouyfXH1PeqXPUtZcxzcnxbw"/>
+<div class="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<span class="text-white text-[0.65rem] tracking-[0.1em] font-label uppercase">Creative Director</span>
+</div>
+</div>
+<h4 class="font-headline text-xl text-primary mb-1">Dr. Rishabh Iyer</h4>
+<p class="text-on-surface-variant text-sm font-body italic">Cardiology Fellow</p>
+</div>
+<!-- Board Member 4 -->
+<div class="group">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Female neurologist with professional demeanor, modern office setting, bright clean lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4hKGAEu9lBYWup_9P595xA-0cnBoOHWFtAzdn1LPq0I_inAvG1WKhQY7Cyjp7BpKqL4yygo2-R5kebe-GNs9vG1Ga52Gr_OeiSEpspNafPmteWWwfmtvmi-W4f0QrZqkhfwKuEZcK8cjeReeeXBUIBM1WirUlhMkodVuu5-Q3_lCaZr910SQAa24oc76KEi8buB5LsIOCRojLQTNa14boAg14-Co3g21ypsaB8lGz48At4aSd4zXh82aV5QcE0aceJyBkQ1Zquxs"/>
+<div class="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<span class="text-white text-[0.65rem] tracking-[0.1em] font-label uppercase">Managing Editor</span>
+</div>
+</div>
+<h4 class="font-headline text-xl text-primary mb-1">Dr. Megha Sen</h4>
+<p class="text-on-surface-variant text-sm font-body italic">HOD, Neurology</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Join Us Section -->
+<section class="py-24 px-12 bg-primary text-on-primary overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<svg fill="none" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="200" r="180" stroke="white" stroke-width="0.5"></circle>
+<circle cx="200" cy="200" r="140" stroke="white" stroke-width="0.5"></circle>
+<circle cx="200" cy="200" r="100" stroke="white" stroke-width="0.5"></circle>
+</svg>
+</div>
+<div class="max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2">
+<span class="text-tertiary-fixed-dim font-label text-[0.75rem] tracking-[0.3em] uppercase mb-6 block">Future Contributors</span>
+<h2 class="text-[2.75rem] font-headline mb-8 leading-tight">Your Voice belongs in the <span class="italic">Clinical Canon.</span></h2>
+<p class="text-lg opacity-80 font-body mb-10 leading-relaxed">
+                        Are you a medical student with a passion for writing, illustration, or scientific communication? SAMPRITI offers a unique platform to showcase your talent alongside established medical professionals.
+                    </p>
+<div class="flex flex-wrap gap-6">
+<button class="bg-gradient-to-br from-tertiary-fixed-dim to-on-tertiary-container text-on-tertiary px-8 py-4 rounded font-label text-sm tracking-widest font-bold hover:shadow-lg transition-all active:scale-95">
+                            APPLY FOR MEMBERSHIP
+                        </button>
+<button class="border border-white/20 hover:border-white/60 px-8 py-4 rounded font-label text-sm tracking-widest text-white transition-all">
+                            EXPLORE GUIDELINES
+                        </button>
+</div>
+</div>
+<div class="lg:w-1/2 grid grid-cols-2 gap-4">
+<div class="bg-primary-container p-8 rounded-lg">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl mb-4" data-icon="edit_note">edit_note</span>
+<h3 class="font-headline text-lg mb-2">Editorial Stint</h3>
+<p class="text-xs opacity-70 font-body leading-relaxed">Learn the rigors of peer review and manuscript preparation from our senior board.</p>
+</div>
+<div class="bg-primary-container p-8 rounded-lg mt-8">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl mb-4" data-icon="brush">brush</span>
+<h3 class="font-headline text-lg mb-2">Creative Wing</h3>
+<p class="text-xs opacity-70 font-body leading-relaxed">Contribute cover art, biological illustrations, or clinical photography.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-[#f4f3f2] dark:bg-[#121414] w-full mt-auto py-16 px-12 border-t border-[#073246]/10">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="flex flex-col gap-6 max-w-sm">
+<div class="text-xl font-bold text-[#073246] dark:text-[#faf9f8] font-headline">SAMPRITI</div>
+<p class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 font-body text-sm italic">
+                    Bridging Science and Artistry through editorial precision and human-centric medical practice.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer text-primary" data-icon="mail">mail</span>
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer text-primary" data-icon="share">share</span>
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer text-primary" data-icon="feed">feed</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="flex flex-col gap-4">
+<h5 class="text-[#073246] dark:text-[#f7bd48] font-label font-bold text-xs tracking-widest uppercase">Quick Links</h5>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#00696a] transition-all text-sm font-body" href="#">Privacy Policy</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#00696a] transition-all text-sm font-body" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-[#073246] dark:text-[#f7bd48] font-label font-bold text-xs tracking-widest uppercase">Resources</h5>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#00696a] transition-all text-sm font-body" href="#">Editorial Board</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#00696a] transition-all text-sm font-body" href="#">Contact</a>
+</div>
+</div>
+<div class="w-full md:w-auto md:text-right flex flex-col gap-4">
+<p class="text-xs text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 font-body">
+                    © 2024 SAMPRITI Medical Society. All rights reserved.
+                </p>
+<div class="flex md:justify-end gap-2 text-[0.65rem] tracking-[0.2em] font-label text-primary font-bold">
+<span>LIT</span>
+<span class="opacity-30">|</span>
+<span>MED</span>
+<span class="opacity-30">|</span>
+<span>ART</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

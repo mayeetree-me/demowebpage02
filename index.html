@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SAMPRITI | Medical Society Journal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-container": "#eeeeed",
+                "inverse-primary": "#a7cbe4",
+                "primary": "#073246",
+                "tertiary": "#3f2b00",
+                "on-primary": "#ffffff",
+                "on-error": "#ffffff",
+                "on-secondary-container": "#006e6f",
+                "on-secondary": "#ffffff",
+                "background": "#faf9f8",
+                "on-primary-container": "#93b7cf",
+                "surface-container-low": "#f4f3f2",
+                "on-tertiary": "#ffffff",
+                "secondary-container": "#90eff0",
+                "tertiary-fixed": "#ffdea6",
+                "surface-bright": "#faf9f8",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed-dim": "#76d6d6",
+                "surface-container-high": "#e9e8e7",
+                "surface-variant": "#e3e2e1",
+                "on-surface-variant": "#40484c",
+                "on-primary-fixed-variant": "#264b5f",
+                "on-secondary-fixed-variant": "#004f50",
+                "error-container": "#ffdad6",
+                "outline-variant": "#c0c7cd",
+                "surface-tint": "#3f6378",
+                "primary-container": "#24495d",
+                "primary-fixed": "#c4e7ff",
+                "secondary": "#00696a",
+                "on-error-container": "#93000a",
+                "surface-dim": "#dadad9",
+                "primary-fixed-dim": "#a7cbe4",
+                "inverse-on-surface": "#f1f0f0",
+                "outline": "#71787d",
+                "on-surface": "#1a1c1c",
+                "on-tertiary-container": "#e0a935",
+                "tertiary-container": "#5b4000",
+                "on-tertiary-fixed": "#271900",
+                "on-secondary-fixed": "#002020",
+                "inverse-surface": "#2f3130",
+                "surface-container-highest": "#e3e2e1",
+                "tertiary-fixed-dim": "#f7bd48",
+                "secondary-fixed": "#93f2f3",
+                "on-tertiary-fixed-variant": "#5d4200",
+                "on-background": "#1a1c1c",
+                "error": "#ba1a1a",
+                "surface": "#faf9f8",
+                "on-primary-fixed": "#001e2c"
+              },
+              fontFamily: {
+                "headline": ["Noto Serif", "serif"],
+                "body": ["Inter", "sans-serif"],
+                "label": ["Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #073246 0%, #24495d 100%);
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(26, 28, 28, 0.05);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf9f8;
+            color: #1a1c1c;
+        }
+        h1, h2, h3 {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- Top Navigation Bar -->
+<header class="bg-[#faf9f8] dark:bg-[#1a1c1c] shadow-sm dark:shadow-none docked full-width top-0 z-50">
+<nav class="flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-[#073246] dark:text-[#faf9f8]" style="font-family: Noto Serif, serif;">
+                SAMPRITI
+            </div>
+<div class="hidden md:flex items-center space-gap-8 gap-8">
+<a class="text-[#00696a] dark:text-[#f7bd48] border-b-2 border-[#00696a] pb-1 font-semibold text-sm tracking-wide transition-all" href="#">HOME</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity hover:text-[#00696a] dark:hover:text-[#f7bd48] text-sm tracking-wide" href="#">PUBLICATIONS</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity hover:text-[#00696a] dark:hover:text-[#f7bd48] text-sm tracking-wide" href="#">CREATIVE LOUNGE</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity hover:text-[#00696a] dark:hover:text-[#f7bd48] text-sm tracking-wide" href="#">ARCHIVES</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity hover:text-[#00696a] dark:hover:text-[#f7bd48] text-sm tracking-wide" href="#">GALLERY</a>
+<a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-80 hover:opacity-100 transition-opacity hover:text-[#00696a] dark:hover:text-[#f7bd48] text-sm tracking-wide" href="#">ABOUT US</a>
+</div>
+<div class="flex items-center gap-4 text-[#073246] dark:text-[#24495d]">
+<button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full transition-colors">search</button>
+<button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full transition-colors">account_circle</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20 grayscale-0 mix-blend-multiply" data-alt="Abstract macro photography of colorful medical fluids mixing in a petri dish, mimicking a nebula with deep blues and gold highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2eifafQM5FhpNJdPaj74rpqZUyZhOVAeiO_ktWa_bZyK1UIglZwV5M96qVH4Ux146qGyujSP2faOJfCq9aA3B36bIFWI882tx3fniRRqGboH9V5_XOB_MkJJeRN-0bMAu0wfwDG490q_eP19JVIcsv0kBRC8--ackMwSAGfr8vYZxTlJHQsYgyivaj1G9xP-umbCtYNog1HtMqp-AE7ZtEHm9OPqXh6mh8dtrKYoLK7xdoYVqWjmIjd_vM1h530i1kW3Uj2Ba0w4"/>
+<div class="hero-gradient absolute inset-0 opacity-90"></div>
+</div>
+<div class="relative z-10 max-w-screen-2xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<span class="text-tertiary-fixed-dim font-bold tracking-[0.2em] text-xs mb-4 block">MEDICAL SOCIETY &amp; EDITORIAL HOUSE</span>
+<h1 class="text-on-primary text-6xl md:text-8xl leading-tight mb-8 font-headline">
+                        Where Science <br/> <span class="italic font-normal text-tertiary-fixed-dim">Meets the Canvas.</span>
+</h1>
+<p class="text-on-primary-container text-xl md:text-2xl font-light leading-relaxed mb-10 max-w-xl font-body">
+                        Bridging Science and Artistry through rigorous medical discourse and creative medical illustration. 
+                    </p>
+<div class="flex gap-6">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-lg font-medium tracking-wide editorial-shadow hover:scale-[1.02] transition-transform">
+                            Explore Publications
+                        </button>
+<button class="border border-outline-variant border-opacity-30 text-on-primary px-8 py-4 rounded-lg font-medium hover:bg-white/5 transition-colors">
+                            Our Mission
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 hidden lg:block">
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-tertiary-fixed-dim/10 rounded-full blur-3xl"></div>
+<img class="rounded-lg shadow-2xl relative z-10 transform rotate-3 hover:rotate-0 transition-transform duration-500 editorial-shadow border border-white/10" data-alt="Detailed anatomical illustration of a human heart rendered in a vintage watercolor style with scientific annotations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA-QksBQR9KHv2A7uNMzcMJL0_8OfraFpnTxpn9UT1LuCh_w48Mj2ayD_5e0d1fbuIjkmHSLkF44O-k3sQ0bxdPSgLLhuQWzUATY3ThNBduLan4IIr_3StfF1m_Xfi0MeOQAoIWA3vuYrKj08rtbEop9gGwsiYXGXSBtlF0-IfNWH-WLKQhqQr14PzOLIXQ2gCuTsu3PXCbWpO95hX4ik-SzNY60dkt9GW0QhIUhRew5dNOpQwpd9oKxNyyBo2DXAhMy0GwOblX4Q"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission Statement / Intro -->
+<section class="py-24 bg-surface px-12">
+<div class="max-w-4xl mx-auto text-center">
+<div class="inline-block h-12 w-px bg-tertiary-fixed-dim mb-8"></div>
+<h2 class="text-primary text-4xl md:text-5xl font-headline mb-8 italic">"Medicine is the most beautiful of all arts."</h2>
+<p class="text-on-surface-variant text-lg leading-loose font-body">
+                    SAMPRITI was founded on the belief that scientific discovery and artistic expression are not mutually exclusive. As a premier medical journal society, we curate research that challenges the intellect and illustrations that captivate the eye. Our mission is to provide a platform for medical professionals to share their clinical findings while celebrating the aesthetic essence of biological life.
+                </p>
+</div>
+</section>
+<!-- Recent Publications (Magazine Layout) -->
+<section class="py-24 bg-surface-container-low px-12">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="text-secondary font-bold tracking-widest text-xs uppercase mb-2 block">The Archives</span>
+<h2 class="text-primary text-4xl font-headline">Recent Publications</h2>
+</div>
+<a class="text-secondary font-semibold flex items-center gap-2 hover:gap-4 transition-all group" href="#">
+                        VIEW ALL EDITIONS 
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<!-- Issue 01 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-white overflow-hidden rounded-lg editorial-shadow mb-6 transition-transform group-hover:-translate-y-2">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Minimalist magazine cover titled SAMPRITI with a high-contrast black and white image of a microscope lens and surgical steel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3sEVL1-MLUo4aovtB57yPt-FQuEo0pIX3ZZCOUEXaOuEtgFkfRGwwjhOP3eLufG_q4hibzhOz9PswY2xTbfM0yUGq3i_-2MXUuBAJ2gdnJbceqKBVf4GmW8sXfSikA2K8baiorXJDo_-xAUzIBKyBuZDaLyeZoGTaF4EVgQoxpMploKdBGrQAWV_X-61b3Sgldjb_9wlj0BjJ4EskOhXlymlkVqS13NCl6Ln3amEORECQ-ZAChhVp7EFSX646p8N4g124_WTB5wE"/>
+</div>
+<span class="text-tertiary font-bold text-[10px] tracking-widest uppercase mb-1 block">Winter 2024 Edition</span>
+<h3 class="text-primary text-xl font-headline group-hover:text-secondary transition-colors">Vol. 12: The Neurological Tapestry</h3>
+<p class="text-on-surface-variant text-sm mt-2 line-clamp-2">Exploring the intersections of synaptic mapping and generative abstract art.</p>
+</div>
+<!-- Issue 02 -->
+<div class="group cursor-pointer lg:mt-12">
+<div class="aspect-[3/4] bg-white overflow-hidden rounded-lg editorial-shadow mb-6 transition-transform group-hover:-translate-y-2">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Magazine cover featuring a vibrant, artistic 3D rendering of a double helix DNA strand made of glass and light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEAuiBMfbUNkVzi_gZtdJll-NhdfzGYL78wcd0Ckh8wODg8sRk3x2D85JU-s7w4znSzOZP0LmJbkMZEE4RqPNfsf9LVS7TubEHkfS5Q6laMkVdBx898LbPFpm2bSky5AwvmV3htM85lTXfZl1fqABRc3Q71OVwsheFqoFL2jggLy1GZ90zsFNCNrKkq4elntUh7-v6h4jK0HebxgFS0c2_tDINrJSP_W6sQsMFuMNVIY_doD5HIb4NJnL36zE8L3Aa5hg4rhFvmjI"/>
+</div>
+<span class="text-tertiary font-bold text-[10px] tracking-widest uppercase mb-1 block">Autumn 2023 Edition</span>
+<h3 class="text-primary text-xl font-headline group-hover:text-secondary transition-colors">Vol. 11: Genetic Symphonies</h3>
+<p class="text-on-surface-variant text-sm mt-2 line-clamp-2">A deep dive into CRISPR technology and the ethics of biological design.</p>
+</div>
+<!-- Issue 03 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-white overflow-hidden rounded-lg editorial-shadow mb-6 transition-transform group-hover:-translate-y-2">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Elegant magazine cover showing a close-up of a human eye with golden paint flecks on the iris, very editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKW8FYVL9bhct4r0MRjJPNuKTzYGPNvRPr8F8AivSNvISF-F3AKAbV0tFkaRPp-UviDsru0oTCArGu1PNhqLeOID9VoWjJDIG_YdeUOi0WrIw00SZ3XcsMvwr9jW-bzR5td0SLsr21NO0EBo7Rs6ytOmO0Fk40LAL8rU9Wc3-1cKjMktQn4ZBdZMCW8ryQs7_K_32M18333jl5j06DVGBj05W8PnjiDlRtGka1lXZIpSa6G8jBbGeZrSMsSZ2m9ZaYU6rsDT17ayA"/>
+</div>
+<span class="text-tertiary font-bold text-[10px] tracking-widest uppercase mb-1 block">Summer 2023 Edition</span>
+<h3 class="text-primary text-xl font-headline group-hover:text-secondary transition-colors">Vol. 10: Ocular Perspectives</h3>
+<p class="text-on-surface-variant text-sm mt-2 line-clamp-2">Visual perception and the anatomy of the artist's eye.</p>
+</div>
+<!-- Issue 04 -->
+<div class="group cursor-pointer lg:mt-12">
+<div class="aspect-[3/4] bg-white overflow-hidden rounded-lg editorial-shadow mb-6 transition-transform group-hover:-translate-y-2">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Scientific journal cover showing a macro shot of organic leaf veins resembling lung structures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNrHJseufmmm8RlkER3uNlaXd0g-PcWV646OwTphMo7srIroQMAggFDdjfZZQ6Z4M1Oga3BhMoVBjU8mJEdRjgHIWA1JiEPZR9ux7ops4ptcaHF72rSskQ7vKbF4E5x7Rb1fz4uSwQlWDsXiJ4XJ_SkS2HTF5dtwugaiiLA7gaywmkN9Zy0CedXa22BPOiUAgd5v8ofTLq70fheE2HmgxJSuaWOY17iD161wisWY7X6lVurrwEJwZY5gxPbcMDBKwN5ZnddeLnM4Q"/>
+</div>
+<span class="text-tertiary font-bold text-[10px] tracking-widest uppercase mb-1 block">Spring 2023 Edition</span>
+<h3 class="text-primary text-xl font-headline group-hover:text-secondary transition-colors">Vol. 09: Pulmonary Landscapes</h3>
+<p class="text-on-surface-variant text-sm mt-2 line-clamp-2">Respiratory health and the architectural beauty of the alveolar sac.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Society Highlights (Bento Grid) -->
+<section class="py-24 bg-surface px-12">
+<div class="max-w-screen-2xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-primary text-5xl font-headline mb-4">Society Highlights</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto font-body">Capturing the moments where our community converges to celebrate the marriage of clinical medicine and the fine arts.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-6 h-auto md:h-[800px]">
+<!-- Large Highlight -->
+<div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-lg group">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Large audience in a dimly lit, high-end lecture hall watching a presentation of medical illustrations on a screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnykg4nVPgnLWfhb0DNwqw6062I4jMgx_pMqzhqpAlFAkac9QS7wT409nM1bXeyCopceiDdIVuKAUVwR5pWLjS5-nIU2b4m-mejUQIaU48CM-jIYG1TFW3Jp5q9j4wMjdNN8JD5QJWVkqZiX8oaAt9A0IXhjEN8mfxSf59cM2dAgHFwyN3d_IAk_XbFLSYrWKyDXNc0Oo81Mz_rESxEsTgp9NNF4adzKVu2DPPfONTOujqWoFK_OuQQ47RytmyO7mRjjefi5xu2f0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-10 left-10 right-10">
+<span class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-bold text-[10px] px-3 py-1 tracking-widest uppercase rounded-sm inline-block mb-4">ANNUAL GALA</span>
+<h3 class="text-on-primary text-3xl font-headline mb-4">The 2024 Curators of Health Symposium</h3>
+<p class="text-on-primary-container max-w-lg">Over 500 medical professionals gathered in London to discuss the future of diagnostic imaging as an art form.</p>
+</div>
+</div>
+<!-- Small Highlight 1 -->
+<div class="relative overflow-hidden rounded-lg group">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Chic rooftop networking event at night with city lights in the background and people in formal wear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB__IV63HqB4iBdMqwHqkjyhMM2e6_zPN188ipz8XTNYUKzziu-KFyZYBiqcA19PfxAgBK6RB2YsQpeC8NrNg0eWw-bXS0IBKzTrbYoAQ6tIEkA8c5OP6dyKZwdRdxJmXknJZ2dcxT_gT91elKg1fB6TBOHCHgYeofykDRWX1ZYQd5ZFPS5qt32nSBey8GOnDbemwUIcp0Avqr78sJWpZ-dcolF1dKFkpVC7kh3azavbHd3sZDIgH-VkP2ILG8xjPKNvesB8fbfkCc"/>
+<div class="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-colors"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-on-primary text-xl font-headline">Creative Lounge: After Hours</h4>
+<p class="text-on-primary-container text-xs mt-1">Networking under the stars.</p>
+</div>
+</div>
+<!-- Small Highlight 2 -->
+<div class="relative overflow-hidden rounded-lg group">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Close up of an artist's hands sketching human anatomy with charcoal on a large paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrIJa3azlpvLpRYko_f0ILfLTCJ7R0tVPFklQ-nNMRMC44FX5E_niVR6hd82DCGHDC4_1sw-8hpt-Gyoo6PglQY6D7bxQsFFh5PMbF7ke8CfUhfEHoIewvohFmnPI8z_hx5oIX1LLJQcQ4iBwIfvkMxnv9eV4Xhu4HRe1F7fF2bPERfAt-tJHkY2mkLDKxm61UEaAEOKf9cKhijQDddzMr8u0N-mo28kAi1cH8P-3BEwJjw3ySyPkapkJ9uoJ8gBJjUPkkzQ5Kq7s"/>
+<div class="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-colors"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-on-primary text-xl font-headline">Workshop: Anatomy Sketches</h4>
+<p class="text-on-primary-container text-xs mt-1">Refining the clinical eye.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Pull-Quote Section -->
+<section class="py-32 px-12 bg-surface-container-lowest">
+<div class="max-w-4xl mx-auto relative">
+<div class="absolute -left-8 top-0 bottom-0 w-1 bg-tertiary-fixed-dim"></div>
+<blockquote class="text-primary text-3xl md:text-5xl font-headline leading-tight italic pl-8">
+                    "The art of medicine consists in amusing the patient while nature cures the disease. We aim to document both the amusement and the nature with equal precision."
+                </blockquote>
+<cite class="block mt-8 pl-8 text-on-surface-variant font-body text-lg">— Editorial Board, SAMPRITI Society</cite>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f4f3f2] dark:bg-[#121414] w-full mt-auto py-16 px-12 border-t border-[#073246]/10">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-sm">
+<div class="text-xl font-bold text-[#073246] dark:text-[#faf9f8] mb-4" style="font-family: Noto Serif, serif;">
+                    SAMPRITI
+                </div>
+<p class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 text-sm italic mb-6 leading-relaxed" style="font-family: Noto Serif, serif;">
+                    Bridging Science and Artistry through global medical collaboration and creative editorial excellence.
+                </p>
+<div class="flex gap-4">
+<a class="material-symbols-outlined text-[#073246] dark:text-[#f7bd48] opacity-60 hover:opacity-100 transition-opacity" href="#">public</a>
+<a class="material-symbols-outlined text-[#073246] dark:text-[#f7bd48] opacity-60 hover:opacity-100 transition-opacity" href="#">mail</a>
+<a class="material-symbols-outlined text-[#073246] dark:text-[#f7bd48] opacity-60 hover:opacity-100 transition-opacity" href="#">rss_feed</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div>
+<h5 class="text-[#073246] dark:text-[#f7bd48] font-bold text-xs tracking-widest uppercase mb-6">Society</h5>
+<ul class="flex flex-col gap-4">
+<li><a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] dark:hover:text-[#f7bd48] transition-all text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] dark:hover:text-[#f7bd48] transition-all text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] dark:hover:text-[#f7bd48] transition-all text-sm" href="#">Editorial Board</a></li>
+<li><a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] dark:hover:text-[#f7bd48] transition-all text-sm" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[#073246] dark:text-[#f7bd48] font-bold text-xs tracking-widest uppercase mb-6">Connect</h5>
+<ul class="flex flex-col gap-4">
+<li><a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] dark:hover:text-[#f7bd48] transition-all text-sm" href="#">Submit Research</a></li>
+<li><a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] dark:hover:text-[#f7bd48] transition-all text-sm" href="#">Art Gallery Submissions</a></li>
+<li><a class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 hover:text-[#f7bd48] dark:hover:text-[#f7bd48] transition-all text-sm" href="#">Join the Society</a></li>
+</ul>
+</div>
+</div>
+<div class="w-full md:w-auto md:text-right flex flex-col items-end">
+<div class="bg-primary/5 p-6 rounded-lg mb-6 max-w-xs text-left">
+<p class="text-[#073246] text-xs font-bold mb-2 tracking-widest uppercase">Weekly Digest</p>
+<div class="flex border-b border-[#073246]/20 py-2">
+<input class="bg-transparent border-none text-sm w-full focus:ring-0 placeholder:text-primary/40" placeholder="Email address" type="email"/>
+<button class="material-symbols-outlined text-primary">arrow_forward</button>
+</div>
+</div>
+<p class="text-[#1a1c1c] dark:text-[#faf9f8] opacity-60 text-[10px] tracking-widest uppercase">
+                    © 2024 SAMPRITI Medical Society. Bridging Science and Artistry.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
